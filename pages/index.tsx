@@ -9,7 +9,11 @@ import Snowflakes from 'magic-snowflakes';
 const Home: NextPage = () => {
 
   useEffect(() => {
-    const snowflakes = new Snowflakes();
+    const snowflakes = new Snowflakes({
+      color: "#14aef0",
+      count: 50,
+      speed: 2
+    });
     snowflakes.start();
     return () => snowflakes.destroy();
   }, [])
